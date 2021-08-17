@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="application-name" content="%REACT_APP_NAME%">
+  <meta name="description" content="%REACT_APP_DESCRIPTION%">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Cahuu</title>
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function (v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location))
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <script type="">
+    /* Bootstrap css */
+    @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+    /* Propeller typography */
+    @import "https://opensource.propeller.in/components/typography/css/typography.css";
+
+    /* Propeller buttons */
+    @import "https://opensource.propeller.in/components/button/css/button.css";
+
+    /* Propeller icons */
+    @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+    @import "https://opensource.propeller.in/components/icons/css/google-icons.css";
+    //  @import loaderImage from 'img/cahuu.webp';
+    // @import loaderImage from './images/loading_spinner1.png';
+
+  </script>
+  <style type="">
+    .splash{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      z-index: 200;
+      color: white;
+      text-align: center;
+      line-height: 90vh;
+    }
+    .splash.display-none{
+      position: fixed;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      z-index: -10;
+      color: white;
+      text-align: center;
+      line-height: 90vh;
+      transition: all 0.5s;
+    }
+    @keyframes fadeIn {
+      to{
+        opacity: 1;
+      }
+    }
+    .fade-in{
+        opacity:0;
+        animation: fadeIn 1s ease-in forwards;
+      }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+    <div class="cr-page-spinner splash">
+      <!-- {/* <div class="loading" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div> */}
+      {/* <Spinner>
+      </Spinner>*/} -->
+      <!-- <div class="fade-in col-sm-4">
+        <img src={loaderImage} width="200px" alt="loader" />
+        <h6>because time is priceless</h6>
+      </div>
+    </div> -->
+      <!-- <div class="splash">
+      <h1 class="fade-in">Loader....</h1>
+     
+    </div> -->
+      <!-- <img src={loaderImage} alt="loader" /> -->
+    </div>
+
+</body>
+
+</html>

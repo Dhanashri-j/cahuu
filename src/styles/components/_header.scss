@@ -1,0 +1,44 @@
+.cr-header {
+  margin-bottom: $spacer * .5;
+  border-bottom: $border-width solid $border-color;
+  
+  // z-index: 3;
+    // sublime light
+    background: #f5f5f5; /* fallback for old browsers */
+    // background: linear-gradient(to bottom, #6a82fb, #fc5c7d);
+    // background: linear-gradient(to bottom, #d846db, #2ea392);
+    color:#00524c;
+    opacity: 1;
+
+  &__nav-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  // &__notification-popover {
+  //   &.popover {
+  //     width: 320px;
+  //     max-width: 320px;
+  //     max-height: 100vh;
+  //     overflow-y: scroll;
+  //     cursor: pointer;
+  //   }
+  // }
+}
+// .headerCol{
+  
+// color: #000;
+// }
+Navbar-nav > li {
+  float: left;
+  position: relative;
+}
+Navbar Navbar-Nav .active a::after {
+  border-bottom: 5px solid #fff;
+  bottom: -10px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
