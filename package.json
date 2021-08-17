@@ -52,7 +52,7 @@
   },
   "scripts": {
     "start": "react-scripts start npm run webpack-dev-server --host 127.0.0.1 --port 4000 --hot --inline --watch --content-base dist --history-api-fallback",
-    "build": "react-scripts build",
+    "build": "CI=react-scripts build",
     "serve": "serve -s build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
