@@ -4,7 +4,7 @@ import App from './App';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from 'common/store';
-import { BrowserRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter,HashRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
 import Login from 'containers/Login';
 import Notification from 'containers/Notification';
 import Dashboard from 'containers/DashboardPage';
@@ -22,7 +22,7 @@ import history from './history';
 import PageSpinner from 'containers/PageSpinner';
 
 render(
-    <BrowserRouter>
+    <HashRouter>
         <Provider store={store}>
             <div>
                 <Router history={history} >
@@ -42,7 +42,7 @@ render(
                 <Notification />
             </div>
         </Provider>
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('root')
 );
 
